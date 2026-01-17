@@ -1,48 +1,168 @@
-# Draw.io 流程图工作区
+# Draw.io Diagrams Enhanced Skill
 
-本工作区用于创建和管理 Draw.io 格式的专业流程图和项目管理图表。
+[English](#english) | [中文](#中文)
 
-## 文件说明
+---
 
-| 文件名 | 描述 |
-|--------|------|
-| `approval_flowchart.drawio` | 业务审批流程图示例 |
+<a name="english"></a>
+## English
 
-## 支持的图表类型
+### Overview
 
-### 标准图表
-- **流程图** - 基本流程、决策树、业务流程
-- **跨职能流程图 (泳道图)** - 跨部门/角色的流程展示
-- **BPMN 图** - 业务流程建模标记法
-- **UML 图** - 类图、序列图、用例图
-- **网络拓扑图** - 基础设施、云架构、系统设计
-- **组织结构图** - 团队层级和汇报关系
-- **思维导图** - 概念映射和头脑风暴
-- **ER 图** - 数据库实体关系
+This skill enables Claude to create professional Draw.io diagrams in native XML format (`.drawio` files) with enterprise-grade capabilities including PMP/PMBOK project management methodologies and extensive icon libraries.
 
-### PMP/PMBOK 项目管理图表
-- **WBS (工作分解结构)** - 项目可交付成果的层级分解
-- **PERT/CPM 网络图** - 活动依赖和关键路径分析
-- **甘特图** - 基于时间线的项目进度
-- **RACI 矩阵** - 责任分配矩阵
-- **风险矩阵** - 概率-影响热力图
-- **利益相关者地图** - 权力-利益矩阵
+### How to Use
 
-## 图形规范
+Simply ask Claude to create a diagram:
 
-### 颜色编码
+```
+# Basic flowchart
+"Create a flowchart for user registration process"
 
-| 元素类型 | 颜色 | 用途 |
-|----------|------|------|
-| 开始/成功 | 绿色 `#d5e8d4` | 起始节点、成功状态 |
-| 处理步骤 | 蓝色 `#dae8fc` | 常规处理流程 |
-| 决策判断 | 黄色 `#fff2cc` | 条件分支、判断点 |
-| 警告/退回 | 橙色 `#ffe6cc` | 需要注意的步骤 |
-| 错误/驳回 | 红色 `#f8cecc` | 失败、拒绝状态 |
-| 结束/归档 | 紫色 `#e1d5e7` | 结束节点、归档 |
+# Swimlane diagram
+"Draw a cross-functional flowchart for order processing"
 
-### 形状规范
+# Project management
+"Generate a WBS for software development project"
+"Create a RACI matrix for my team"
+"Draw a risk matrix heat map"
+```
 
+### Supported Diagram Types
+
+#### Standard Diagrams
+| Type | Description | Use Case |
+|------|-------------|----------|
+| Flowchart | Basic process flows, decision trees | Business processes, algorithms |
+| Swimlane (CFF) | Cross-functional flowcharts | Multi-department workflows |
+| BPMN | Business Process Model and Notation | Enterprise process modeling |
+| UML | Class, sequence, use case diagrams | Software design |
+| Network | Infrastructure, cloud architecture | System design |
+| Org Chart | Organizational hierarchies | Team structures |
+| Mind Map | Conceptual mapping | Brainstorming |
+| ERD | Entity Relationship Diagrams | Database design |
+
+#### PMP/PMBOK Project Management Diagrams
+| Type | Description | Use Case |
+|------|-------------|----------|
+| WBS | Work Breakdown Structure | Project scope decomposition |
+| PERT/CPM | Project network diagrams | Activity sequencing, critical path |
+| Gantt | Timeline-based schedules | Project scheduling |
+| RACI | Responsibility matrix | Role assignment |
+| Risk Matrix | Probability-impact grid | Risk assessment |
+| Stakeholder Map | Power-interest grid | Stakeholder analysis |
+
+### Shape & Color Standards
+
+#### Colors
+| Purpose | Fill Color | Stroke Color |
+|---------|------------|--------------|
+| Start/Success | `#d5e8d4` | `#82b366` |
+| Process Step | `#dae8fc` | `#6c8ebf` |
+| Decision | `#fff2cc` | `#d6b656` |
+| Warning | `#ffe6cc` | `#d79b00` |
+| Error/Reject | `#f8cecc` | `#b85450` |
+| End/Archive | `#e1d5e7` | `#9673a6` |
+
+#### Shapes
+| Shape | Usage |
+|-------|-------|
+| Ellipse | Start/End nodes |
+| Rounded Rectangle | Process steps |
+| Diamond | Decision points |
+| Parallelogram | Data I/O |
+| Document | Documents/Reports |
+| Swimlane | Department/Role lanes |
+
+### Opening Diagrams
+
+- **Online**: [app.diagrams.net](https://app.diagrams.net/)
+- **VS Code**: Install [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
+- **Desktop**: Download [Draw.io Desktop](https://github.com/jgraph/drawio-desktop/releases)
+
+### Custom Icon Libraries
+
+Load additional icons in draw.io:
+```
+https://app.diagrams.net/?clibs=Uhttps://jgraph.github.io/drawio-libs/libs/templates.xml
+```
+
+Available libraries:
+- Material Design Icons / Font Awesome
+- AWS / Azure / GCP cloud icons
+- Kubernetes icons
+- Network device icons (Cisco, Fortinet, etc.)
+
+### Resources
+
+- [Draw.io Documentation](https://www.drawio.com/doc/)
+- [Example Diagrams](https://www.drawio.com/example-diagrams)
+- [Custom Libraries](https://github.com/jgraph/drawio-libs)
+- [PMBOK Guide](https://www.pmi.org/)
+
+---
+
+<a name="中文"></a>
+## 中文
+
+### 概述
+
+此技能使 Claude 能够创建专业的 Draw.io 格式流程图（`.drawio` 文件），支持企业级项目管理图表（PMP/PMBOK）和丰富的图标库。
+
+### 使用方法
+
+直接向 Claude 描述您需要的图表：
+
+```
+# 基本流程图
+"画一个用户注册流程图"
+
+# 泳道图
+"画一个跨部门的订单处理流程"
+
+# 项目管理图表
+"生成一个软件开发项目的 WBS"
+"创建团队的 RACI 矩阵"
+"画一个风险矩阵热力图"
+```
+
+### 支持的图表类型
+
+#### 标准图表
+| 类型 | 描述 | 使用场景 |
+|------|------|----------|
+| 流程图 | 基本流程、决策树 | 业务流程、算法 |
+| 泳道图 (CFF) | 跨职能流程图 | 多部门工作流 |
+| BPMN | 业务流程建模标记法 | 企业流程建模 |
+| UML | 类图、序列图、用例图 | 软件设计 |
+| 网络图 | 基础设施、云架构 | 系统设计 |
+| 组织结构图 | 组织层级 | 团队结构 |
+| 思维导图 | 概念映射 | 头脑风暴 |
+| ER 图 | 实体关系图 | 数据库设计 |
+
+#### PMP/PMBOK 项目管理图表
+| 类型 | 描述 | 使用场景 |
+|------|------|----------|
+| WBS | 工作分解结构 | 项目范围分解 |
+| PERT/CPM | 项目网络图 | 活动排序、关键路径 |
+| 甘特图 | 时间线进度表 | 项目排程 |
+| RACI | 责任分配矩阵 | 角色分配 |
+| 风险矩阵 | 概率-影响矩阵 | 风险评估 |
+| 利益相关者图 | 权力-利益矩阵 | 干系人分析 |
+
+### 图形与颜色规范
+
+#### 颜色
+| 用途 | 填充色 | 边框色 |
+|------|--------|--------|
+| 开始/成功 | `#d5e8d4` | `#82b366` |
+| 处理步骤 | `#dae8fc` | `#6c8ebf` |
+| 决策判断 | `#fff2cc` | `#d6b656` |
+| 警告提示 | `#ffe6cc` | `#d79b00` |
+| 错误/驳回 | `#f8cecc` | `#b85450` |
+| 结束/归档 | `#e1d5e7` | `#9673a6` |
+
+#### 形状
 | 形状 | 用途 |
 |------|------|
 | 椭圆 | 开始/结束节点 |
@@ -52,33 +172,26 @@
 | 文档形状 | 文档/报告 |
 | 泳道 | 部门/角色分区 |
 
-## 打开和编辑
+### 打开图表
 
-### 在线编辑
-访问 [app.diagrams.net](https://app.diagrams.net/) 打开 `.drawio` 文件
+- **在线**: [app.diagrams.net](https://app.diagrams.net/)
+- **VS Code**: 安装 [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) 插件
+- **桌面应用**: 下载 [Draw.io Desktop](https://github.com/jgraph/drawio-desktop/releases)
 
-### VS Code
-安装 [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) 插件
+### 自定义图标库
 
-### 桌面应用
-下载 [Draw.io Desktop](https://github.com/jgraph/drawio-desktop/releases)
-
-## 自定义图标库
-
-如需使用额外图标，可在 draw.io 中加载自定义库：
-
+在 draw.io 中加载额外图标：
 ```
 https://app.diagrams.net/?clibs=Uhttps://jgraph.github.io/drawio-libs/libs/templates.xml
 ```
 
 可用图标库：
-- Material Design Icons
-- Font Awesome
-- AWS/Azure/GCP 云服务图标
+- Material Design 图标 / Font Awesome
+- AWS / Azure / GCP 云服务图标
 - Kubernetes 图标
 - 网络设备图标 (Cisco, Fortinet 等)
 
-## 参考资源
+### 参考资源
 
 - [Draw.io 官方文档](https://www.drawio.com/doc/)
 - [示例图表](https://www.drawio.com/example-diagrams)
